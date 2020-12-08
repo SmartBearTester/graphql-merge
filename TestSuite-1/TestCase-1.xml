@@ -3,6 +3,20 @@
   <con:settings>
     <con:setting id="7998ea2e-0c12-46da-91e8-70da0376b0d8fileName">TestCase-1</con:setting>
   </con:settings>
+  <con:testStep name="GraphQL Mutation" type="graphqltestmutationrequest" id="2932dc9e-dbc8-4404-a2a8-ce2ed8e2da1d">
+    <con:settings/>
+    <con:config interface="GraphQL Service 1" operationName="addCustomer" operationType="mutation" xsi:type="con:GraphQLTestRequestWithSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:request name="GraphQL Mutation" id="5ba3c895-6f18-4a29-99b3-d4893a8a8f46">
+        <con:settings/>
+        <con:endpoint>http://ubuntuserverlts.aqa.com.ru:4000/graphql</con:endpoint>
+        <con:request>{"query":"mutation {\n  addCustomer(name: \"string\", email: \"string\", age: 0) {\n    id\n    name\n    email\n    age\n    status\n    products {\n      productID\n      productName\n      quantity\n      info {\n        made\n        disign\n        warranty\n        AnnualFailureRate\n      }\n    }\n    data {\n      LicenseType\n      Status\n    }\n  }\n}\n","operationName":null,"variables":null}</con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+      </con:request>
+    </con:config>
+  </con:testStep>
   <con:properties/>
   <con:reportParameters/>
 </con:testCase>
