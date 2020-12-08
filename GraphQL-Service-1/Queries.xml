@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operationGroup type="query" name="Queries" id="4f620f1c-f983-4fc5-923f-c7eb091ec9dd" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4f620f1c-f983-4fc5-923f-c7eb091ec9ddfileName">Queries</con:setting>
+  </con:settings>
+  <con:graphQLOperation name="customer" bindingOperationName="customer" id="8854c760-0a45-4383-b90a-5ef590c6e4fc">
+    <con:settings/>
+    <con:graphQLRequest name="customer" id="89ad80c2-97d1-4935-8a55-24535fd80600">
+      <con:settings/>
+      <con:endpoint>http://ubuntuserverlts.aqa.com.ru:4000/graphql</con:endpoint>
+      <con:request>{"query":"query {\n  customer(id: \"string\") {\n    id\n    name\n    email\n    age\n    status\n    products {\n      productID\n      productName\n      quantity\n      info {\n        made\n        disign\n        warranty\n        AnnualFailureRate\n      }\n    }\n    data {\n      LicenseType\n      Status\n    }\n  }\n}\n","operationName":null,"variables":null}</con:request>
+    </con:graphQLRequest>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="customers" bindingOperationName="customers" id="b1e71ae7-84d0-4b8e-b9e1-bd3d8151f844">
+    <con:settings/>
+    <con:graphQLRequest name="customers" id="a0730afc-39b9-40fd-a9ca-03ebd286698f">
+      <con:settings/>
+      <con:endpoint>http://ubuntuserverlts.aqa.com.ru:4000/graphql</con:endpoint>
+      <con:request>{"query":"query {\n  customers {\n    id\n    name\n    email\n    age\n    status\n    products {\n      productID\n      productName\n      quantity\n      info {\n        made\n        disign\n        warranty\n        AnnualFailureRate\n      }\n    }\n    data {\n      LicenseType\n      Status\n    }\n  }\n}\n","operationName":null,"variables":null}</con:request>
+    </con:graphQLRequest>
+  </con:graphQLOperation>
+</con:operationGroup>
